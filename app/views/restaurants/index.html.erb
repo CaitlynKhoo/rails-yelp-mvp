@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant), class: "btn btn-primary mt-3"%></li>
+  <% end %>
+<%# button to add a new restaurant %>
+<%= link_to "Add new restaurant", new_restaurant_path, class: "btn btn-light"%>
+</div>
+
+
+
+<div class="container">
+  <h1>Restaurants</h1>
+  <div class="card-product">
+    <img src="https://source.unsplash.com/1920x1080/?#{restaurant.category} food" />
+    <div class="card-product-infos">
+      <h2><%= restaurant.name %></h2>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
+</div>
